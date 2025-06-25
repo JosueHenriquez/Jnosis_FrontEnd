@@ -1,0 +1,343 @@
+/* Variables */
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --accent-color: #4895ef;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #4cc9f0;
+    --error-color: #f72585;
+    --border-radius: 8px;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.wallpapers.com%2F4k-tecnologia&psig=AOvVaw0lZMlumhP2qJM19i-9CTUC&ust=1750910958898000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCvz-DZi44DFQAAAAAdAAAAABAE') no-repeat center center;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Contenedor del login */
+.login-container {
+    width: 90%;
+    max-width: 420px;
+    margin: 5vh auto;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px);
+    transform: translateY(0);
+    transition: var(--transition);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+}
+
+.login-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #6c757d;
+    transition: var(--transition);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: none;
+    border-bottom: 2px solid #e9ecef;
+    background-color: transparent;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+}
+
+.form-group input:focus + label {
+    color: var(--primary-color);
+}
+
+.form-group input:valid + label {
+    transform: translateY(-25px);
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.form-group input:focus ~ .underline {
+    width: 100%;
+}
+
+.show-password {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #6c757d;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.show-password:hover {
+    color: var(--primary-color);
+}
+
+/* Opciones del formulario */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.remember-me input {
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #6c757d;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.forgot-password:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Botón de login */
+.login-btn {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
+}
+
+/* Loader */
+.loader {
+    display: flex;
+    gap: 5px;
+}
+
+.loader .dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out;
+}
+
+.loader .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Login social */
+.social-login {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.social-login p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: #e9ecef;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.social-icon.google {
+    background-color: #db4437;
+}
+
+.social-icon.facebook {
+    background-color: #4267B2;
+}
+
+.social-icon.twitter {
+    background-color: #1DA1F2;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Enlace de registro */
+.register-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.register-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+        margin: 2vh auto;
+    }
+    
+    .logo {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .login-header h1 {
+        font-size: 1.5rem;
+    }
+}
