@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel - EduGest</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/images/logo.png" alt="EduGest Logo">
+                <h2>EduGest</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-book-open"></i>
+                            <span>Cursos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-tasks"></i>
+                            <span>Proyectos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendario</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Estadísticas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            <span>Estudiantes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="assets/images/user-avatar.png" alt="Usuario">
+                    <div class="user-info">
+                        <h4>María González</h4>
+                        <p>Docente</p>
+                    </div>
+                    <a href="#" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <div class="notifications">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="content-wrapper">
+                <h1 class="welcome-title">Bienvenida, <span>María</span></h1>
+                <p class="welcome-subtitle">Aquí tienes un resumen de tus actividades</p>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #a7c7e7;">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p>Cursos activos</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #89cff0;">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>8</h3>
+                            <p>Proyectos</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #c6e2ff;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>142</h3>
+                            <p>Estudiantes</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #5d8aa8;">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>5</h3>
+                            <p>Eventos hoy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Courses Section -->
+                <section class="courses-section">
+                    <div class="section-header">
+                        <h2>Tus Cursos Recientes</h2>
+                        <a href="#" class="view-all">Ver todos</a>
+                    </div>
+                    <div class="courses-grid">
+                        <div class="course-card">
+                            <div class="course-icon" style="background-color: #a7c7e7;">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div class="course-info">
+                                <h3>Física Avanzada</h3>
+                                <p>Grado 11 - 32 estudiantes</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%;"></div>
+                                </div>
+                                <span>75% completado</span>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <div class="course-icon" style="background-color: #89cff0;">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="course-info">
+                                <h3>Matemáticas</h3>
+                                <p>Grado 10 - 28 estudiantes</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%;"></div>
+                                </div>
+                                <span>60% completado</span>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <div class="course-icon" style="background-color: #c6e2ff;">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="course-info">
+                                <h3>Química</h3>
+                                <p>Grado 9 - 35 estudiantes</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%;"></div>
+                                </div>
+                                <span>45% completado</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Calendar & Tasks -->
+                <div class="calendar-tasks-grid">
+                    <section class="upcoming-events">
+                        <div class="section-header">
+                            <h2>Próximos Eventos</h2>
+                            <a href="#" class="view-all">Ver calendario</a>
+                        </div>
+                        <div class="events-list">
+                            <div class="event-item">
+                                <div class="event-date" style="background-color: #a7c7e7;">
+                                    <span>15</span>
+                                    <small>Jun</small>
+                                </div>
+                                <div class="event-details">
+                                    <h3>Reunión de profesores</h3>
+                                    <p>10:00 AM - Sala de conferencias</p>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date" style="background-color: #89cff0;">
+                                    <span>18</span>
+                                    <small>Jun</small>
+                                </div>
+                                <div class="event-details">
+                                    <h3>Entrega de proyectos</h3>
+                                    <p>Física Avanzada - Grado 11</p>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date" style="background-color: #c6e2ff;">
+                                    <span>20</span>
+                                    <small>Jun</small>
+                                </div>
+                                <div class="event-details">
+                                    <h3>Excursión científica</h3>
+                                    <p>Museo de Ciencias - Todo el día</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="recent-tasks">
+                        <div class="section-header">
+                            <h2>Tareas Recientes</h2>
+                            <a href="#" class="view-all">Ver todas</a>
+                        </div>
+                        <div class="tasks-list">
+                            <div class="task-item">
+                                <div class="task-check">
+                                    <input type="checkbox" id="task1" checked>
+                                    <label for="task1"></label>
+                                </div>
+                                <div class="task-details">
+                                    <h3>Revisar exámenes de Matemáticas</h3>
+                                    <p>Grado 10 - Hasta el 16 de Junio</p>
+                                </div>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-check">
+                                    <input type="checkbox" id="task2">
+                                    <label for="task2"></label>
+                                </div>
+                                <div class="task-details">
+                                    <h3>Preparar material de laboratorio</h3>
+                                    <p>Química - Grado 9</p>
+                                </div>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-check">
+                                    <input type="checkbox" id="task3">
+                                    <label for="task3"></label>
+                                </div>
+                                <div class="task-details">
+                                    <h3>Enviar calificaciones parciales</h3>
+                                    <p>Física Avanzada - Antes del 20</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
