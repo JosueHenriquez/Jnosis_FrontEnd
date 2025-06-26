@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await request.text();
 
             // Simulación de éxito
-            alert("Inicio de sesión exitoso");
-            console.log("Login exitoso", { username, password, rememberMe });
+            //alert("Inicio de sesión exitoso");
+            //console.log("Login exitoso", { username, password});
 
             // Redirección simulada
             setTimeout(() => {

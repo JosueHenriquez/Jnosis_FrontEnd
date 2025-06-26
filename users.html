@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administración de Usuarios</title>
+  <link rel="stylesheet" href="assets/css/table.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="toolbar">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Buscar por nombre, apellido o correo...">
+        <button id="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      <button id="add-btn" class="btn-primary">
+        <i class="fas fa-plus"></i> Nuevo Registro
+      </button>
+    </div>
+
+    <div class="table-responsive">
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th class="hidden">ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Grupo Expo</th>
+            <th>Rol</th>
+            <th>Correo</th>
+            <th>Cargo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Datos se cargarán dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="assets/js/tableUsers.js"></script>
+</body>
+</html>
